@@ -11,7 +11,7 @@ function Login() {
         e.preventDefault();
         const username = e.target.username.value;
         try {
-            await axios.get(`http://localhost:3001/users/${username}`);
+            await axios.get(`${process.env.REACT_APP_API}/users/${username}`);
             login(username);
             Navigate("/");
         }

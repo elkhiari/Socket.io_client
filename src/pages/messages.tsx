@@ -7,8 +7,8 @@ import { IoSendSharp } from 'react-icons/io5';
 import MessagesData from '../components/messages';
 import UsersLogin from '../components/users';
 import Audio from '../components/audio';
-
-const socket = io("http://localhost:3001");
+const Link  = process.env.REACT_APP_API
+const socket = io(`${Link}`);
 
 function Messages() {
     const {username} = useContext(authContext);
